@@ -19,7 +19,8 @@ def load_model():
 try:
     model = load_model()
 except Exception as e:
-    st.error("The prediction model could not be loaded. Make sure car_price_model.pkl is in the same GitHub folder as app.py.")
+    st.error("The prediction model could not be loaded.")
+    st.exception(e)
     st.stop()
 
 # ---------------- CUSTOM DESIGN ----------------
